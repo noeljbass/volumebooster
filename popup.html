@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Volume Booster</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app" aria-labelledby="title">
+      <header class="hero">
+        <div class="logo" aria-hidden="true">🔊</div>
+        <div>
+          <h1 id="title">Volume Booster</h1>
+          <p>Boost this tab up to 600%</p>
+        </div>
+      </header>
+
+      <section class="meter" aria-live="polite">
+        <span id="boostValue">100%</span>
+        <small id="boostLabel">Normal volume</small>
+      </section>
+
+      <label class="slider-label" for="boostSlider">Boost level</label>
+      <input id="boostSlider" type="range" min="0" max="600" step="10" value="100">
+
+      <div class="ticks" aria-hidden="true">
+        <span>0%</span>
+        <span>100%</span>
+        <span>300%</span>
+        <span>600%</span>
+      </div>
+
+      <div class="controls">
+        <button type="button" class="preset" data-boost="100">Reset</button>
+        <button type="button" class="preset" data-boost="200">2×</button>
+        <button type="button" class="preset" data-boost="400">4×</button>
+        <button type="button" class="preset" data-boost="600">Max</button>
+      </div>
+
+      <p id="status" class="status" role="status">Ready</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
