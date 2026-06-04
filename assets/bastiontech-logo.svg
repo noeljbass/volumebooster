@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 112" role="img" aria-labelledby="title desc">
+  <title id="title">BastionTech</title>
+  <desc id="desc">BastionTech wordmark with a stylized bastion icon.</desc>
+  <g fill="none" fill-rule="evenodd">
+    <g fill="#fff">
+      <path d="M52 2 74 8v20l18 6v18l-8 7v37l-13-4V65L52 59 33 65v27l-13 4V59l-8-7V34l18-6V8L52 2Zm0 21L20 32v13l32-9 32 9V32l-32-9Zm-19 42v41l19-5 19 5V65l-19-6-19 6Zm12 18a7 7 0 0 1 14 0v17H45V83Z"/>
+      <path d="m52 75 52 14-7 10-45-12L7 99 0 89l52-14Z"/>
+      <path d="m52 94 40 11-17 6-23-7-23 7-17-6 40-11Z"/>
+    </g>
+    <g font-family="Inter, Arial Black, Arial, sans-serif" font-size="66" font-weight="900" letter-spacing="-4">
+      <text x="150" y="78" fill="#fff">Bastion</text>
+      <text x="414" y="78" fill="#4f6f96">Tech</text>
+    </g>
+  </g>
+</svg>
