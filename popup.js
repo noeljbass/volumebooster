@@ -1,6 +1,8 @@
 const DEFAULT_BOOST = 100;
 const MIN_BOOST = 0;
 const MAX_BOOST = 600;
+const LIGHT_ICON_PATH = 'assets/bastionboostblack.png';
+const DARK_ICON_PATH = 'assets/bastionboostwhite.png';
 
 const slider = document.querySelector('#boostSlider');
 const boostValue = document.querySelector('#boostValue');
@@ -45,6 +47,18 @@ function renderBoost(boost) {
 
 function setStatus(message) {
   statusText.textContent = message;
+}
+
+function getExtensionIconPath() {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? DARK_ICON_PATH : LIGHT_ICON_PATH;
+}
+
+async function updateExtensionIcon() {
+  if (!chrome.action?.setIcon) {
+    return;
+  }
+
+  await chrome.action.setIcon({ path: getExtensionIconPath() });
 }
 
 function getTabStorageKey(tabId) {
@@ -103,6 +117,8 @@ function scheduleBoost(boost) {
 }
 
 async function initialize() {
+  await updateExtensionIcon();
+
   const tab = await getActiveTab();
   activeTabId = tab?.id;
 
@@ -130,5 +146,7 @@ presetButtons.forEach((button) => {
     sendBoost(boost);
   });
 });
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateExtensionIcon);
 
 initialize();
