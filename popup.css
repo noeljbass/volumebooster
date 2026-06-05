@@ -34,8 +34,8 @@ body {
 .brand-link {
   display: block;
   justify-self: center;
-  width: 72px;
-  border-radius: 18px;
+  width: 180px;
+  border-radius: 12px;
   line-height: 0;
   transition: opacity 160ms ease, transform 160ms ease;
 }
@@ -66,9 +66,16 @@ body {
   height: 48px;
   place-items: center;
   border-radius: 16px;
-  background: linear-gradient(135deg, var(--accent), #8b5cf6);
-  box-shadow: 0 14px 35px rgba(14, 165, 233, 0.35);
-  font-size: 26px;
+  background: var(--panel);
+  box-shadow: 0 14px 35px rgba(14, 165, 233, 0.2);
+  overflow: hidden;
+}
+
+
+.app-logo {
+  display: block;
+  width: 34px;
+  height: auto;
 }
 
 h1 {
@@ -153,6 +160,26 @@ input[type="range"] {
   color: var(--muted);
   font-size: 12px;
   text-align: center;
+}
+
+.oss-note {
+  margin: -4px 0 0;
+  text-align: center;
+}
+
+.oss-note a {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration-color: color-mix(in srgb, var(--muted) 45%, transparent);
+  text-underline-offset: 3px;
+}
+
+.oss-note a:hover,
+.oss-note a:focus-visible {
+  color: var(--accent-strong);
+  outline: none;
 }
 
 @media (prefers-color-scheme: dark) {
