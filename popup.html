@@ -15,12 +15,15 @@
     <a class="brand-link" href="https://bastiontech.org/" target="_blank" rel="noopener noreferrer"
       aria-label="Visit BastionTech">
       <picture>
-        <source srcset="assets/bastionboostwhite.png" media="(prefers-color-scheme: dark)">
-        <img class="brand-logo" src="assets/bastionboostblack.png" alt="BastionBoost">
+        <source srcset="assets/BastionLogoWhite.png" media="(prefers-color-scheme: dark)">
+        <img class="brand-logo" src="assets/BastionLogoBlack.png" alt="BastionTech">
       </picture>
     </a>
     <header class="hero">
-      <div class="logo" aria-hidden="true">🔊</div>
+      <picture class="logo" aria-hidden="true">
+        <source srcset="assets/bastionboostwhite.png" media="(prefers-color-scheme: dark)">
+        <img class="app-logo" src="assets/bastionboostblack.png" alt="">
+      </picture>
       <div>
         <h1 id="title">Volume Booster</h1>
         <p>Boost this tab up to 600%</p>
@@ -50,6 +53,12 @@
     </div>
 
     <p id="status" class="status" role="status">Ready</p>
+
+    <footer class="oss-note">
+      <a href="https://github.com/BastionTech/volumebooster" target="_blank" rel="noopener noreferrer">
+        This is a Free and Open Source project. Check out the repository on GitHub.
+      </a>
+    </footer>
   </main>
   <script src="popup.js"></script>
 </body>
